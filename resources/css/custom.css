@@ -1,0 +1,148 @@
+.d-block {
+    display: block;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.p-5 {
+    padding: 5px;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.text-red {
+    color: #FF010B;
+}
+
+.text-green {
+    color: #28a745;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.border-red {
+    border-color: #FF010B;
+}
+
+.bg-green {
+    background-color: #28a745;
+}
+
+.c-notification-alert {
+    border-radius: 10px;
+}
+
+.blur-box {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(250, 250, 250, 0.8);
+}
+
+.modal_window__overlay {
+    position: fixed;
+    display: none;
+    z-index: 199;
+    width: 100%;
+    background: #000;
+    opacity: .7;
+    height: 100vh;
+    top: 0;
+}
+
+.modal_window__inner {
+    max-width: 600px;
+    padding: 31px 20px 31px 20px;
+    min-width: 300px;
+    background: #e4e4e4;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    display: none;
+    transform: translate(-50%,-50%);
+    z-index: 200;
+}
+
+.modal_window__inner.active {
+    display: flex;
+}
+
+.modal_window__inner.modal_window__callback {
+    width: 100%;
+}
+
+.modal_window__inner .modal_window__close {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+    top: 5px;
+    z-index: 21;
+    width: 21px;
+    height: 21px;
+    background-image: url("../images/svg/modal-close.svg");
+}
+
+.modal_window__inner .modal_window__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+#form-modal-callback {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#form-modal-callback .fb-form-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#form-modal-callback .fb-form-item:last-child {
+    margin-bottom: 0;
+}
+
+#form-modal-callback .fb-form-item .fb-form__label {
+    margin-bottom: 5px;
+}
+
+#form-modal-callback .fb-btn {
+    justify-content: center;
+}

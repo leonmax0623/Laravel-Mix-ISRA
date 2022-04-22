@@ -1,0 +1,209 @@
+.fb
+  padding: 35px 0
+  background-color: $component-bg
+  &-h
+    margin-bottom: 50px
+    display: flex
+    align-items: center
+    &__icon
+      width: 40px
+      height: 40px
+    &__title
+      margin: 0
+      font-size: 27px
+      color: $dark-text
+  &__inner
+    margin-bottom: 25px
+    display: flex
+    justify-content: space-between
+  &-form
+    &__wrapper
+      width: 50%
+    &__row
+      margin-bottom: 30px
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &-item
+      width: 31%
+    &__label
+      margin-bottom: 15px
+      display: block
+      font-size: 15px
+      color: $dark-text
+    &__input
+      width: 100%
+    &__textarea
+      border-radius: 10px
+      border: 1px solid #E9EBEF
+      padding: 30px
+      max-width: 100%
+      width: 100%
+      height: 300px
+      resize: none
+      font-size: 15px
+      color: #B3B7BC
+      background-color: #F1F2F4
+  &-info
+    width: 40%
+    &-item
+      margin-bottom: 25px
+      display: flex
+      align-items: center
+    &__icon
+      max-width: 30px
+      max-height: 30px
+    &__data
+      font-size: 16px
+      font-style: normal
+      color: $dark-text
+    &-group
+      margin: 25px 0
+      padding-top: 25px
+      border-top: 1px dotted #CCCDD0
+      border-bottom: 1px dotted #CCCDD0
+  &-link-map
+    height: 48px
+    border-radius: 24px
+    padding: 0 20px
+    display: inline-flex
+    align-items: center
+    background-color: $active
+    &__icon
+      width: 20px
+      height: 20px
+    &__text
+      font-size: 16px
+      color: #ffffff
+  ._light
+    color: #959698
+  &-btn
+    border: none
+    border-radius: 29px
+    height: 58px
+    padding: 0 25px
+    display: flex
+    align-items: center
+    background-color: $active
+    cursor: pointer
+    &__icon
+      margin-right: 10px
+      svg
+        width: 20px
+        height: 20px
+        fill: #ffffff
+    &__text
+      font-size: 18px
+      color: #ffffff
+  
+
+body[data-dir="ltr"]
+  .fb
+    &-h
+      &__icon
+        margin-right: 15px 
+    &-info
+      &__icon
+        margin-right: 15px
+    &-link-map
+      &__icon
+        margin-right: 15px
+      &__text
+        &::after
+          width: 4px
+          height: 4px
+          border-top: 2px solid #ffffff
+          border-right: 2px solid #ffffff
+    &-btn
+      &__text
+        &::after
+          width: 4px
+          height: 4px
+          border-top: 2px solid #ffffff
+          border-right: 2px solid #ffffff
+
+body[data-dir="rtl"]
+  .fb
+    &-h
+      &__icon
+        margin-left: 15px
+    &-form
+      &__row
+        flex-direction: row-reverse
+    &-info
+      &__icon
+        margin-left: 15px
+    &-btn
+      flex-direction: row-reverse
+      &__text
+        &::before
+          border-top: 2px solid #ffffff
+          border-right: 2px solid #ffffff
+
+@media ( max-width: 1610px )
+  .fb
+    padding: 35px 20px
+
+@media ( max-width: 1367px )
+  .fb
+    &-form
+      &__wrapper
+        width: 58%
+    &-info
+      &__icon
+        max-width: 20px
+        max-height: 20px
+      &__data
+        font-size: 13px
+    &-link-map
+      height: 45px
+      padding: 0 15px
+      &__text
+        font-size: 14px
+    &-btn
+      height: 50px
+      &__text
+        font-size: 16px
+
+@media ( max-width: 991px )
+  .fb
+    margin-top: 30px
+    &-h
+      &__icon
+        width: 34px
+        height: 34px
+      &__title
+        font-size: 22px
+    &__inner
+      flex-wrap: wrap
+    &-form
+      margin: 0 auto
+      width: 80%
+      &__wrapper
+        margin-bottom: 30px
+        width: 100%
+    &-info
+      margin: 0 auto
+      width: 80%
+    &-btn
+      margin: 0 auto
+
+@media ( max-width: 768px )
+  .fb
+    &-h
+      &__title
+        font-size: 18px
+    &-form
+      &__row
+        margin-bottom: 20px
+        flex-wrap: wrap
+      &-item
+        margin-bottom: 20px
+        width: 100%
+      &__label
+        margin-bottom: 5px
+      &__input
+        height: 45px
+      &__textarea
+        height: 200px
+        padding: 20px

@@ -1,0 +1,302 @@
+.calc
+  padding: 50px 20px 400px
+  &-h
+    margin-bottom: 50px
+    display: flex
+    align-items: center
+    &__title
+      margin: 0
+      font-size: 27px
+      color: $dark-text
+  &-b
+    margin: 0 auto
+    padding: 35px
+    border-top-left-radius: 20px
+    border-top-right-radius: 20px
+    border-bottom: 1px solid #F0F1F3
+    background-color: $component-bg
+  &-bar
+    margin-bottom: 35px
+    border-radius: 20px
+    padding: 20px
+    padding-bottom: 0
+    display: flex
+    flex-wrap: wrap
+    background-color: #ffffff
+    box-shadow: 0 6px 6px 0 #dfe1e3
+  &-dd
+    margin-bottom: 20px
+    border-radius: 24px
+    margin-right: 20px
+    padding: 0 14px
+    height: 48px
+    display: inline-flex
+    align-items: center
+    justify-content: space-between
+    background-color: $component-bg
+    color: $dark-text
+    cursor: pointer
+    user-select: none
+    &__text
+      font-size: 16px
+      white-space: nowrap
+    &__arrow
+      border-radius: 50%
+      width: 20px
+      height: 20px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 14px
+      background-color: #EFF0F3
+  &-list
+    padding: 4px 0
+    z-index: 10
+    border-radius: 20px
+    background-color: #ffffff
+    box-shadow: 0px 0px 6px 0 #dfe1e3
+    &__item
+      padding: 8px 13px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      border-bottom: 1px solid #F0F1F5
+      &:last-child
+        border-bottom: none
+      &:hover
+        background-color: darken(#ffffff, 2%)
+    &__label
+      font-size: 14px
+  &-subdd
+    border-radius: 5px
+    height: 23px
+    padding: 6px 8px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: #F6F7FA
+    &-list
+      border-radius: 5px
+      text-align: center
+      padding: 6px 0
+      background-color: #F6F7FA
+      box-shadow: 0px 0px 6px 0 #dfe1e3
+      li
+        border-bottom: 1px solid #F0F1F5
+        padding: 3px
+        &:last-child
+          border-bottom: none
+        &:hover
+          background-color: #e2e2e2
+  &-title
+    margin-bottom: 30px
+    font-size: 21px
+    color: $dark-text
+  &-label
+    margin-bottom: 35px
+    font-size: 16px
+    color: $dark-text
+    font-weight: bold
+    ._grey
+      color: #BBC0C3
+  &-placeholder
+    border-radius: 8px
+    height: 15px
+    background-color: #ECEEF3
+  &-progress
+    position: relative
+    width: 32.5%
+    height: 100%
+    background-color: $active
+    &.full
+      border-radius: 8px
+  &-ind
+    position: absolute
+    top: -27px
+    &__val
+      margin-bottom: 5px
+      font-size: 14px
+      color: $dark-text
+    &__div
+      margin: 0 auto
+      width: 6px
+      height: 35px
+      border: 3px solid $dark-text
+  &-divs
+    padding: 0 30px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .line
+      margin: 0 auto 8px
+      width: 1px
+      height: 9px
+      background-color: #cacaca
+    .num
+      font-size: 13px
+      color: #cacaca
+  &-f
+    border-bottom-left-radius: 20px
+    border-bottom-right-radius: 20px
+    padding: 15px 35px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background-color: $component-bg
+    &-total
+      +rubik-bold
+      font-size: 28px
+      color: $dark-text
+      ._red
+        color: $active
+    &-bar
+      display: flex
+      align-items: center
+  &-link
+    margin: 0 10px
+    max-width: none
+    &._grey
+      background-color: #686B74
+
+
+body[data-dir="ltr"]
+  .calc
+    &-h
+      &__icon
+        margin-right: 10px
+    &-dd
+      &__text
+        margin-right: 10px
+    &-list
+      &__label
+        margin-right: 10px
+    &-subdd
+      &__text
+        margin-right: 7px
+    &-label
+      +exo-med
+    &-progress
+      border-top-left-radius: 8px
+      border-bottom-left-radius: 8px
+    &-ind
+      right: 0
+      transform: translateX(50%)
+      &__div
+        border-left: none
+    &-divs
+      .num
+        +exo-med
+
+body[data-dir="rtl"]
+  .calc
+    &-h
+      &__icon
+        margin-left: 10px
+    &-bar
+      flex-direction: row-reverse
+    &-dd,
+      &__text
+        margin-left: 10px
+    &-list
+      &__label
+        margin-left: 10px
+    &-subdd
+      &__text
+        margin-left: 7px
+    &-label
+      +rubik-med
+    &-progress
+      border-top-right-radius: 8px
+      border-bottom-right-radius: 8px
+    &-ind
+      left: 0
+      transform: translateX(-50%)
+      &__div
+        border-right: none
+    &-divs
+      .num
+        +rubik-med
+
+@media ( max-width: 991px )
+  .calc
+    &-dd
+      &__text
+        font-size: 12px
+    &-list
+      &__label
+        font-size: 12px
+    &-subdd
+      font-size: 14px
+    &-divs
+      padding: 0 5px
+    &-f
+      &-total
+        font-size: 24px
+
+@media ( max-width: 768px )
+  .calc
+    &-b
+      padding: 15px
+    &-title
+      font-size: 17px
+    &-ind
+      top: -21px
+      &__val
+        font-size: 12px
+      &__div
+        width: 4px
+        height: 26px
+        border: 2px solid #2B2F33
+    &-divs
+      .num
+        font-size: 8px
+    &-f
+      flex-direction: column
+      &-total
+        margin-bottom: 20px
+      &-bar
+        flex-wrap: wrap
+        justify-content: center
+    &-link
+      margin-bottom: 20px
+      
+
+@media ( max-width: 520px )
+  .calc
+    padding-bottom: 100px
+    &-h
+      &__icon
+        width: 19px
+      &__title
+        font-size: 20px
+    &-bar
+      padding: 15px
+    &-dd
+      width: 100%
+    &-list
+      &__item
+        padding: 5px 10px
+    &-placeholder
+      height: 12px
+    &-ind
+      &__div
+        height: 23px
+    &-divs
+      .item
+        display: none
+        &:nth-child(2n)
+          display: block
+      .line
+        height: 6px
+    &-f
+      &-total
+        font-size: 20px
+
+  body[data-dir="ltr"]
+    .calc
+      &-dd
+        margin-right: 0
+  body[data-dir="rtl"]
+    .calc
+      &-dd
+        margin-left: 0

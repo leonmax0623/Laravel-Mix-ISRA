@@ -1,0 +1,85 @@
+.quests
+  padding: 50px 20px
+  &-h
+    margin-bottom: 50px
+    display: flex
+    align-items: center
+    &__icon
+      width: 36px
+    &__title
+      font-size: 27px
+      color: $dark-text
+  &-b
+    margin-bottom: 35px
+    border-radius: 20px
+    padding: 50px
+    padding-bottom: 35px
+    background-color: $component-bg
+  &-item
+    border-radius: 15px
+    margin-bottom: 20px
+    height: 65px
+    background-color: #f0f0f0
+    padding-bottom: 30px
+    overflow: hidden
+    transition: height 500ms ease
+  &-qst
+    margin-bottom: 30px
+    border-radius: 15px
+    height: 65px
+    padding: 0 30px
+    display: flex
+    align-items: center
+    font-size: 17px
+    color: $dark-text
+    background-color: #ffffff
+    box-shadow: 0 7px 10px 0 #dfe1e3
+    cursor: pointer
+  &-ans
+    padding: 0 30px
+    font-size: 15px
+    color: #848587
+
+body[data-dir="ltr"]
+  .quests
+    &-h
+      &__icon
+        margin-right: 15px
+    &-ans
+      +exo-med
+      
+
+body[data-dir="rtl"]
+  .quests
+    &-h
+      &__icon
+        margin-left: 15px
+    &-ans
+      +rubik-med
+
+@media ( max-width: 991px )
+  .quests
+    padding: 30px 20px
+    &-h
+      margin-bottom: 30px
+      &__title
+        font-size: 20px
+    &-b
+      padding: 30px
+    &-item
+      height: 50px
+      padding-bottom: 20px
+    &-qst
+      margin-bottom: 20px
+      height: 50px
+      font-size: 15px
+    &-ans
+      font-size: 13px
+
+@media ( max-width: 520px )
+  .quests
+    &-qst
+      font-size: 13px
+    &-ans
+      font-size: 11px
+      line-height: 16px

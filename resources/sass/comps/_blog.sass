@@ -1,0 +1,181 @@
+.blog
+  padding: 50px 20px
+  &-h
+    margin-bottom: 50px
+    display: flex
+    align-items: center
+    &__icon
+      width: 36px
+    &__title
+      font-size: 27px
+      color: $dark-text
+  &-b
+    margin-bottom: 35px
+    border-radius: 20px
+    padding: 50px
+    padding-bottom: 35px
+    background-color: $component-bg
+  &-c
+    margin-bottom: 40px
+    border-radius: 15px
+    padding: 35px
+    background-color: #ffffff
+    box-shadow: 0 7px 10px 0 #dfe1e3
+    &-h
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+    &-title
+      margin: 0
+      margin-bottom: 40px
+      font-size: 21px
+      color: $dark-text
+    &-date
+      margin-bottom: 40px
+      display: flex
+      align-items: center
+      color: #CFD3D8
+      &__icon
+        svg
+          width: 20px
+          height: 18px
+          fill: #CFD3D8
+    &-row
+      display: flex
+    &-photo
+      // flex-shrink: 0
+      border-radius: 15px
+      width: 35%
+      overflow: hidden
+      img
+        width: 100%
+    &-t
+      // flex-shrink: 1
+      width: 65%
+    &-p
+      margin: 30px 0
+      font-size: 15px
+      color: $dark-text
+      &:first-child
+        margin-top: 0
+  &-slider
+    margin: 30px auto
+    width: 95%
+    &__wrapper
+      position: relative
+    &-photo
+      border-radius: 15px
+      overflow: hidden
+      width: 100%
+      background-color: #F2F5F9
+      img
+        width: 100%
+    &-arrow
+      &-next, &-prev
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 10
+        cursor: pointer
+        svg
+          width: 32px
+          fill: $dark-text
+      &-prev
+        left: 0px
+      &-next
+        right: 0px
+
+
+body[data-dir="ltr"]
+  .blog
+    &-h
+      &__icon
+        margin-right: 15px
+    &-c
+      &-date
+        &__icon
+          margin-left: 10px
+      &-photo
+        margin-right: 40px
+      &-p
+        +exo-med
+
+
+body[data-dir="rtl"]
+  .blog
+    &-h
+      &__icon
+        margin-left: 15px
+    &-c
+      &-date
+        &__icon
+          margin-right: 10px
+      &-photo
+        margin-left: 40px
+      &-p
+        +rubik-med
+
+@media ( max-width: 1367px )
+  .blog
+    &-c
+      &-photo
+        width: 400px
+      &-p
+        margin: 20px 0
+        font-size: 13px
+    &-slider
+      &-arrow
+        &-next, &-prev
+          svg
+            width: 28px
+        &-prev
+          left: -10px
+        &-next
+          right: -10px
+
+
+@media ( max-width: 991px )
+  .blog
+    padding: 30px 20px
+    &-h
+      margin-bottom: 30px
+      &__title
+        font-size: 20px
+    &-b
+      padding: 30px
+    &-c
+      padding: 20px
+      &-title, &-date
+        margin-bottom: 20px
+      &-title
+        font-size: 18px
+      &-date
+        font-size: 14px
+      &-row
+        flex-wrap: wrap
+      &-t
+        width: 100%
+        order: 1
+      &-photo
+        max-width: 490px
+        order: 2
+    &-slider
+      &-arrow
+        &-next, &-prev
+          svg
+            width: 20px
+
+  body[data-dir="ltr"], body[data-dir="rtl"]
+    .blog
+      &-c
+        &-photo
+          margin: 20px auto
+
+@media ( max-width: 520px )
+  .blog
+    padding: 30px 10px
+    &-b
+      padding: 10px
+    &-slider
+      width: 90%

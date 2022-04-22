@@ -1,0 +1,25 @@
+<?php
+
+namespace App\View\Components\Application;
+
+use Illuminate\View\Component;
+
+class NotificationAlert extends Component {
+    /**
+     * Create a new component instance.
+     *
+     * @return void
+     */
+    public function __construct() {
+        //
+    }
+
+    /**
+     * Get the view / contents that represent the component.
+     *
+     * @return \Illuminate\Contracts\View\View|\Closure|string
+     */
+    public function render() {
+        return view('application.components.notification-alert');
+    }
+}

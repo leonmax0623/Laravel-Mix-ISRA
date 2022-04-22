@@ -1,0 +1,17 @@
+.def
+  &-p
+    margin: 0 auto 35px
+    max-width: 1380px
+    padding: 0 20px
+    text-align: center
+    font-size: 18px
+    color: $dark-text
+
+body[data-dir="ltr"]
+  .def
+    &-p
+      +exo-med
+body[data-dir="rtl"]
+  .def
+    &-p
+      +rubik-med

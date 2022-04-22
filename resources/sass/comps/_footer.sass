@@ -1,0 +1,112 @@
+.f
+  display: flex
+  margin-top: 20px
+  &-col
+    &:nth-child(2)
+      margin: 0 80px
+  &-link
+    margin-bottom: 20px
+    display: block
+    font-size: 14px
+    color: #999C9E
+    transition: 0.3s
+    &::before
+      content: ''
+      margin: 0 5px
+      position: relative
+      top: -2px
+      display: inline-block
+      width: 4px
+      height: 4px
+      border-top: 1px solid #999C9E
+      border-right: 1px solid #999C9E
+      transform: rotate(45deg)
+    &:hover
+      color: $active
+  &-logo
+    margin-bottom: 15px
+    width: 208px
+  &-links
+    margin-bottom: 15px
+  &-info
+    &-link
+      img
+        width: 30px
+        height: 30px
+  &-copyright
+    font-size: 14px
+    color: #999C9E
+
+
+body[data-dir="ltr"]
+  .f
+    &-info
+      margin-left: auto
+      text-align: right
+      &-link
+        margin-left: 15px
+        &:first-child
+          margin-left: 0
+
+body[data-dir="rtl"]
+  .f
+    &-info
+      margin-right: auto
+      text-align: left
+      &-link
+        margin-right: 15px
+        &:first-child
+          margin-right: 0
+
+
+@media ( max-width: 1367px )
+  .f
+    padding: 0 10px
+    &-col
+      &:nth-child(2)
+        margin: 0 30px
+    &-logo
+      width: 170px
+    &-info
+      &-link
+        img
+          width: 25px
+          height: 25px
+
+@media ( max-width: 991px )
+  .f
+    &-col
+      &:nth-child(2)
+        margin: 0 10px
+    &-link
+      font-size: 12px
+    &-copyright
+      max-width: 200px
+      font-size: 12px
+
+
+@media ( max-width: 768px )
+  body[data-dir="ltr"], body[data-dir="rtl"]
+    .f-info
+      text-align: center
+      margin: 20px auto
+      width: 100%
+
+  .f
+    justify-content: space-between
+    flex-wrap: wrap
+    &-col
+      width: 30%
+      margin: 0
+      &:nth-child(2)
+        margin: 0
+    &-copyright
+      margin: 0 auto
+      width: auto
+
+@media ( max-width: 520px )
+  .f
+    &-col
+      width: 100%
+
+

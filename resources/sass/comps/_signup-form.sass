@@ -1,0 +1,125 @@
+.rg
+  margin: 0 auto
+  max-width: 1260px
+  padding: 50px 0 100px
+  &-h
+    margin-bottom: 50px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-head
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &__icon
+      svg
+        width: 30px
+        height: 30px
+        fill: $active
+    &__title
+      margin: 0
+      font-size: 27px
+      color: $dark-text
+    &-via
+      display: flex
+      align-items: center
+      &__link
+        margin: 0 5px
+        img
+          width: 25px
+  &-form
+    &__inner
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+    &-item
+      width: 30%
+    &-checkbox
+      &__wrapper
+        display: flex
+        align-items: center
+        label
+          position: relative
+          top: 15px
+      &__text
+        color: #B2B6C1
+
+body[data-dir="ltr"]
+  .rg
+    &-h
+      &__icon
+        margin-right: 15px
+      &-via
+        +exo-med
+    &-form
+      &-checkbox
+        &__text
+          margin-left: 15px
+
+body[data-dir="rtl"]
+  .rg
+    &-h
+      &__icon
+        margin-left: 15px
+      &-via
+        +rubik-med
+    &-form
+      &__inner
+        flex-direction: row-reverse
+      &-checkbox
+        &__text
+          margin-right: 15px
+
+@media ( max-width: 1367px )
+  .rg
+    max-width: 991px
+    padding: 50px 20px
+    &-h
+      &__title
+        font-size: 22px
+    &-form
+      &-btn
+        height: 48px
+        padding: 0 15px
+        font-size: 14px
+  
+@media ( max-width: 991px )
+  .rg
+    &-h
+      &__icon
+        svg
+          width: 20px
+          height: 20px
+      &__title
+        font-size: 18px
+      &-via
+        font-size: 14px
+        &__link
+          img
+            width: 20px
+    &-form
+      &-item
+        width: 45%
+      &-label
+        &__text
+          font-size: 14px
+      &-input
+        height: 45px
+        font-size: 14px
+      &-checkbox
+        &__text
+          font-size: 14px
+
+@media ( max-width: 520px )
+  .rg
+    &-h
+      margin-bottom: 20px
+      flex-wrap: wrap
+      &-head
+        margin-bottom: 20px
+      &-via
+        width: 100%
+    &-form
+      &-item
+        width: 90%
+  

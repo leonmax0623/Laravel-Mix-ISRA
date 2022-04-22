@@ -1,0 +1,468 @@
+.h
+  &-top
+    height: 64px
+    padding: 0 30px
+    display: flex
+    align-items: center
+    background-color: $header-top
+    &-links
+      display: flex
+    &-link
+      margin-right: 15px
+      font-size: 16px
+      color: #A5A6A8
+      text-transform: uppercase
+      transition: 0.3s
+      &__icon
+        display: none
+      &:last-child
+        // margin-right: 0
+      &:hover
+        color: #454C50
+  .lang
+    margin: 0 20px
+    min-width: 100px
+    user-select: none
+    &-item
+      padding: 5px
+      display: flex
+      align-items: center
+      cursor: pointer
+      &._arrow-down
+        &::after
+          content: " ▾"
+          color: #d4d9dd
+    &-icon
+      margin-right: 5px
+      width: 32px
+      height: 32px
+      border-radius: 50%
+      border: 3px solid #F1F3F5
+      display: flex
+      align-items: center
+      justify-content: center
+      img
+        width: 26px
+        height: 26px
+    &-name
+      font-size: 14px
+      color: #454C50
+      &._rtl
+        +rubik-bold
+        direction: rtl
+    &-list
+      background-color: $header-top
+      border-bottom-left-radius: 10px
+      border-bottom-right-radius: 10px
+      li
+        border-top: 1px solid #EAEBEC
+        &:last-child
+          border-bottom-left-radius: 10px
+          border-bottom-right-radius: 10px
+        &:hover
+          background-color: darken($header-top, 5%)
+  .signs
+    margin-left: auto
+    display: flex
+    align-items: center
+    .sign
+      padding: 0 20px
+      height: 64px
+      display: flex
+      align-items: center
+      color: #A5A6A8
+      transition: 0.3s
+      &-icon
+        margin-right: 10px
+        svg
+          fill: #A5A6A8
+      &-text
+        font-size: 16px
+  &-bottom
+    height: 118px
+    padding: 0 50px
+    display: flex
+    align-items: center
+    background-color: $header-bottom
+    &-bar
+      display: flex
+      align-items: center
+  &-logo
+    max-width: 208px
+    img
+      width: 100%
+  &-nav
+    display: flex
+    align-items: center
+    &-link
+      height: 118px
+      display: flex
+      align-items: center
+      margin-right: 30px
+      font-size: 17px
+      color: #959698
+      &:last-child
+        margin-right: 0
+      &.dd
+        padding: 10px 0
+        height: auto
+        user-select: none
+        display: flex
+        align-items: center
+      &__text
+        margin-right: 10px
+        cursor: pointer
+      &__arrow
+        cursor: pointer
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 18px
+        height: 18px
+        font-size: 9px
+        border-radius: 50%
+        background-color: #EFF1F4
+        span
+          width: 5px
+          height: 5px
+          border-right: 1px solid #B5B7BD
+          border-bottom: 1px solid #b5b7bd
+          transform: rotate(45deg)
+      &__list
+        background-color: $header-bottom
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+        li
+          padding: 0 5px
+          height: 40px
+          border-top: 1px solid #EAEBEC
+          a
+            width: 100%
+            height: 100%
+            display: flex
+            align-items: center
+          &:last-child
+            border-bottom-left-radius: 10px
+            border-bottom-right-radius: 10px
+          &:hover
+            background-color: darken($header-bottom, 5%)
+  &-tel
+    display: flex
+    align-items: center
+    &-icon
+      svg
+        fill: $active
+        width: 28px
+        height: 28px
+    &-number
+      font-weight: bold 
+      font-size: 20px
+      color: #454C50
+    &-text
+      padding-bottom: 5px
+      font-size: 15px
+      color: #454C50
+      border-bottom: 1px dotted #454C50
+  &-order
+    border-radius: 26px
+    height: 52px
+    padding: 0 18px
+    display: flex
+    align-items: center
+    border: 2px solid #EAEBEC
+    &-icon
+      margin-right: 15px
+    &-text
+      font-size: 17px
+      color: #454C50
+._h-lg-hidden
+    display: none
+
+body[data-dir="ltr"]
+  .h
+    &-bottom
+      &-bar
+        margin-left: auto
+    &-logo
+      margin-right: 50px
+    &-tel
+      margin-right: 30px
+      &-icon
+        margin-right: 10px
+    &-order
+      &-text
+        &::after
+          border-top: 1px solid #454C50
+          border-right: 1px solid #454C50
+
+body[data-dir="rtl"]
+  .h
+    &-top
+      flex-direction: row-reverse
+    .lang
+      &-item
+        flex-direction: row-reverse
+    .signs
+      flex-direction: row-reverse
+      .sign
+        flex-direction: row-reverse
+    &-bottom
+      &-bar
+        margin-right: auto
+    &-logo
+      margin-left: 50px
+    &-tel
+      margin-left: 30px
+      &-icon
+        margin-left: 10px
+    &-order
+      flex-direction: row-reverse
+      &-text
+        &::before
+          border-top: 1px solid #454C50
+          border-right: 1px solid #454C50      
+    &-nav
+      flex-direction: row-reverse
+      &-link
+        flex-direction: row-reverse
+
+
+@media ( min-width: 991px )
+  .h
+    &-nav
+      &-link
+        transition: color 0.3s
+        &._link
+          &:hover
+            padding-bottom: 2px
+            border-top: 2px solid $active
+            color: $active
+    .signs
+      .sign
+        &:hover
+          background-color: #ffffff
+          border-top: 1px solid $active
+          box-shadow: 0px 3px 3px 0px rgba(197, 197, 197, 0.75)
+
+@media ( max-width: 1367px )
+  body[data-dir="ltr"]
+    .h
+      &-logo
+        margin-right: 30px
+  body[data-dir="rtl"]
+    .h
+      &-logo
+        margin-left: 30px
+
+  .h
+    &-top
+      &-link
+        font-size: 14px
+    .signs
+      .sign
+        &-text
+          font-size: 14px
+    &-bottom
+      height: 75px
+    &-logo
+      max-width: 150px
+    &-nav
+      &-link
+        margin-right: 15px
+        font-size: 16px
+        height: 75px
+    &-tel
+      &-icon
+        svg
+          width: 20px
+          height: 20px
+      &-number
+        font-size: 16px
+      &-text
+        font-size: 14px
+        padding-bottom: 0
+    &-order
+      height: 40px
+      padding: 0 14px
+      &-text
+        font-size: 14px
+
+
+@media ( max-width: 1200px )
+  body[data-dir="ltr"]
+    .h
+      &-logo
+        margin-right: 20px
+  body[data-dir="rtl"]
+    .h
+      &-logo
+        margin-left: 20px
+
+  .h
+    &-bottom
+      padding: 0 30px
+    &-logo
+      max-width: 120px
+    &-nav
+      &-link
+        margin-right: 10px
+        font-size: 14px
+        &__text
+          margin-right: 4px
+        &__arrow
+          width: 14px
+          height: 14px
+          span
+            width: 4px
+            height: 4px
+    &-order
+      &-icon
+        margin-right: 5px
+        width: 20px
+    &-tel
+      &-icon
+        svg
+          width: 17px
+          height: 17px
+      &-number
+        font-size: 14px
+      &-text
+        font-size: 12px
+
+@media ( max-width: 991px )
+
+  body[data-dir="rtl"]
+    .h
+      &-nav
+        flex-direction: column
+      .lang
+        margin-left: auto
+        margin-right: 0
+        order: 2
+      .signs
+        margin-left: 0
+        margin-right: auto
+        order: 1
+
+  ._h-lg-hidden
+    display: flex
+  .menu-btn
+    position: relative
+    z-index: 100
+    display: block
+    width: 28px
+    height: 24px
+    cursor: pointer
+    transition: all 0.7s ease 0s
+    span
+      transition: all .3s ease 0s
+      top: calc(50% - 2px)
+      left: 0
+      position: absolute
+      width: 100%
+      height: 4px
+      background-color: #454C50
+      &:first-child
+        top: 0
+      &:last-child
+        bottom: 0
+        top: auto
+    &.opened
+      span
+        transform: scale(0)
+        &:first-child
+          transform: rotate(-45deg)
+          top: calc(50% - 1px)
+        &:last-child
+          transform: rotate(45deg)
+          top: calc(50% - 1px)
+  .h
+    display: none
+    &.active
+      display: block
+    &-sm-row
+      padding: 15px 20px
+      justify-content: space-between
+      background-color: $header-bottom
+    &-logo
+      max-width: 140px
+    &-top
+      height: auto
+      padding: 0 10px
+      flex-wrap: wrap
+      background-color: $header-bottom
+      &-links
+        padding: 5px 0
+        justify-content: center
+        width: 100%
+        order: 1
+      &-link
+        margin: 0
+        &__text
+          display: none
+        &__icon
+          margin: 0 10px
+          display: block
+          width: 30px
+          height: 30px
+    .lang
+      margin: 0
+      order: 2
+      &-list
+        background-color: $header-bottom
+    .signs
+      order: 3
+      .sign
+        justify-content: center
+        padding: 0 10px
+        &-icon
+          margin-right: 0
+          svg
+            width: 25px
+            height: 25px
+        &-text
+          display: none
+    &-bottom
+      height: auto
+      padding: 0 15px 20px
+      flex-direction: column
+      align-items: start
+      .h-logo
+        display: none
+      &-bar
+        width: 100%
+        justify-content: space-between
+    &-nav
+      margin-bottom: 20px
+      flex-direction: column
+      align-items: start
+      &-link
+        height: 30px
+        font-size: 16px
+
+
+
+@media ( max-width: 520px )
+
+  body[data-dir="ltr"]
+    .h
+      &-tel
+        margin-right: 0
+
+  body[data-dir="rtl"]
+    .h
+      &-tel
+        margin-left: 0
+
+  .h
+    &-top
+      &-link
+        &__icon
+          width: 25px
+          height: 25px
+    &-nav
+      &-link
+        font-size: 14px
+    &-tel
+      &-text
+        display: none

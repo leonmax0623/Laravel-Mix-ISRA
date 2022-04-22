@@ -1,0 +1,28 @@
+.breads
+  margin-top: 30px
+  margin-bottom: 30px
+  font-size: 16px
+  color: $dark-text
+  &-link
+    display: inline-block
+    text-decoration: underline
+    margin: 0 5px 5px
+    color: $active
+  &-divider
+    margin: 0 5px
+  &-curr-page
+    display: inline-block
+    margin: 0 5px 5px
+
+body[data-dir="ltr"]
+  .breads
+    +exo-med
+body[data-dir="rtl"]
+  .breads
+    +rubik-med
+
+
+@media ( max-width: 768px )
+  .breads
+    margin: 30px 20px
+    font-size: 14px

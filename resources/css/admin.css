@@ -1,0 +1,26 @@
+@import './admin/adminlte.css';
+
+@import '~@fortawesome/fontawesome-free/css/brands.css';
+@import '~@fortawesome/fontawesome-free/css/regular.css';
+@import '~@fortawesome/fontawesome-free/css/solid.css';
+@import '~@fortawesome/fontawesome-free/css/fontawesome.css';
+@import '~bs4-summernote/dist/summernote-bs4.css';
+@import '~codemirror/lib/codemirror.css';
+@import '~select2/dist/css/select2.css';
+@import '~datatables.net-bs4/css/dataTables.bootstrap4.css';
+@import '~datatables.net-buttons-bs4/css/buttons.bootstrap4.css';
+@import '~tempusdominus-bootstrap-4/build/css/tempusdominus-bootstrap-4.css';
+@import '~icheck-bootstrap/icheck-bootstrap.css';
+@import '~fullcalendar/main.css';
+
+.select2-container .select2-selection--single {
+    height: unset;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 42px;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+    text-align: left;
+}

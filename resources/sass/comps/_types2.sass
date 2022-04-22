@@ -1,0 +1,110 @@
+.tps2
+  &-b
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+  &-c
+    margin: 0 20px 60px
+    border-radius: 15px
+    max-width: 487px
+    width: 100%
+    padding: 30px
+    background-color: $component-bg
+    box-shadow: 0 6px 6px 0 #dfe1e3
+    &-h
+      margin-bottom: 30px
+    &-row
+      display: flex
+    &-f
+      justify-content: space-between
+      flex-wrap: wrap
+    &__icon
+      width: 50px
+      flex-shrink: 0
+      img
+        width: 100%
+    &-t
+      flex-shrink: 1
+    &-title
+      margin: 0
+      margin-bottom: 10px
+      font-size: 22px
+      color: $dark-text
+    &-p
+      font-size: 15px
+      color: #B7B9BA
+    &-price
+      margin-bottom: 10px
+      border-radius: 20px
+      height: 40px
+      padding: 0 15px
+      display: inline-flex
+      align-items: center
+      background-color: #ffffff
+      color: $active
+    &-f
+      align-items: center
+
+
+body[data-dir="ltr"]
+  .tps2
+    &-c
+      &__icon
+        margin-right: 20px
+      &-p
+        +exo-med
+      &-price, &-f
+        margin-left: 70px
+
+
+body[data-dir="rtl"]
+  .tps2
+    &-c
+      &__icon
+        margin-left: 20px
+      &-p
+        +rubik-med
+      &-price, &-f
+        margin-right: 70px
+
+@media ( max-width: 1200px )
+  .tps2
+    &-b
+      justify-content: space-around
+    &-c
+      margin: 0 0 30px
+      max-width: none
+      width: 45%
+      &-h
+        margin-bottom: 10px
+      &__icon
+        width: 35px
+      &-title
+        font-size: 20px
+      &-p
+        font-size: 13px
+        line-height: 18px
+  
+  body[data-dir="ltr"]
+    .tps2
+      &-c
+        &-price, &-f
+          margin-left: 0
+  body[data-dir="rtl"]
+    .tps2
+      &-c
+        &-price, &-f
+          margin-right: 0
+
+@media ( max-width: 768px )
+  .tps2
+    padding: 0 20px
+    &-c
+      max-width: 480px
+      width: 100%
+
+@media ( max-width: 320px )
+  .tps2
+    &-c
+      .section-more
+        margin-bottom: 10px

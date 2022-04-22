@@ -1,0 +1,122 @@
+.banner
+  width: 100%
+  border-radius: 15px
+  padding: 14px
+  background-color: $active
+  &__wrapper
+    padding: 0 20px
+  &__inner
+    border-radius: 10px
+    overflow: hidden
+    height: 140px
+    padding: 0 50px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    background: $active url(/resources/images/banner-bg.png) no-repeat
+    background-size: contain
+    background-position: right center
+  &-contacts
+    max-width: 34%
+    font-size: 24px
+    color: #ffffff
+    strong
+      font-size: 26px
+    p
+      margin: 0
+      margin-bottom: 10px
+  &-link
+    font-size: 20px
+    text-transform: uppercase
+    color: $dark-text
+
+body[data-dir="ltr"]
+  .banner
+    &-link
+      &::after
+        border-top: 2px solid $dark-text
+        border-right: 2px solid $dark-text
+
+body[data-dir="rtl"]
+  .banner
+    &__inner
+      flex-direction: row-reverse
+    &-contacts
+      direction: ltr
+    &-link
+      &::before
+        border-top: 2px solid $dark-text
+        border-right: 2px solid $dark-text
+
+@media ( max-width: 1500px )
+  .banner
+    &__inner
+      background-position-x: 500px
+    &-contacts
+      max-width: 45%
+      font-size: 22px
+      strong
+        font-size: 24px
+
+@media ( max-width: 1200px )
+  .banner
+    &__inner
+      background-position-x: 300px
+      background-size: cover
+      padding: 0 20px
+    &-contacts
+      max-width: 45%
+      font-size: 18px
+      strong
+        font-size: 20px
+    &-link
+      font-size: 18px
+
+@media ( max-width: 991px )
+  .banner
+    &__inner
+      height: 100px
+    &-contacts
+      max-width: none
+      font-size: 16px
+      strong
+        font-size: 18px
+
+@media ( max-width: 768px )
+  .banner
+    &__inner
+      background-position-x: 150px
+    &-contacts
+      max-width: 30%
+      font-size: 14px
+      strong
+        font-size: 14px
+    &-link
+      font-size: 16px
+
+@media ( max-width: 520px )
+  .banner
+    &__inner
+      height: auto
+      flex-direction: column
+      justify-content: center
+      background-image: none
+    &-contacts
+      max-width: none
+      text-align: center
+      margin-bottom: 20px
+    &-link
+      color: #ffffff
+
+  body[data-dir="ltr"]
+    .banner
+      &-link
+        &::after
+          border-top: 2px solid #ffffff
+          border-right: 2px solid #ffffff
+  body[data-dir="rtl"]
+    .banner
+      &-link
+        &::after
+          border-top: 2px solid #ffffff
+          border-right: 2px solid #ffffff

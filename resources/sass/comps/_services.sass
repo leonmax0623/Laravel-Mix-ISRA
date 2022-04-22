@@ -1,0 +1,139 @@
+.srv
+  padding: 50px 0 80px
+  background-color: $component-bg
+  &-b
+    padding: 0 20px
+    display: flex
+    justify-content: space-between
+  &-c
+    margin: 0 auto
+    max-width: 345px
+    width: 100%
+    border-radius: 15px
+    box-shadow: 0 9px 14px 2px #dfe1e3
+    &__wrapper
+      width: 24%
+    &-photo
+      height: 200px // <- ЭТО СВОЙСТВО НУЖНО УДАЛИТЬ, КОГДА БУДЕТЕ ПОДСТАВЛЯТЬ ФОТОГРАФИИ
+      margin-bottom: 35px
+      border-top-right-radius: 15px
+      border-top-left-radius: 15px
+      background-color: #45484F
+    &-title
+      margin: 0
+      margin-bottom: 35px
+      text-align: center
+      font-size: 22px
+      color: $dark-text
+    &-p
+      margin: 0 auto 35px
+      width: 90%
+      text-align: center
+      font-size: 15px
+      color: #B7B9BA
+    &__more
+      display: block
+      text-align: center
+      margin-bottom: 10px
+  &-link
+    margin: 0 auto
+    transform: translateY(50%)
+
+.cons
+  .srv
+    &-c
+      max-width: 480px
+      &__wrapper
+        width: 30%
+      &-title
+        padding: 0 10px
+
+
+body[data-dir="ltr"]
+  .srv
+    &-c
+      &-p
+        +exo-med
+body[data-dir="rtl"]
+  .srv
+    &-c
+      &-p
+        +rubik-med
+
+@media ( max-width: 1200px )
+  .srv
+    &-b
+      flex-wrap: wrap
+      justify-content: center
+    &-c
+      &__wrapper
+        margin: 0 20px 50px
+        width: 40%
+        display: flex
+        &:nth-child(odd)
+          justify-content: flex-end
+        &:nth-child(even)
+          justify-content: flex-start
+    
+  .cons
+    .srv
+      &-b
+        flex-wrap: nowrap
+      &-c
+        &__wrapper
+          display: block
+          width: 30%
+      
+@media ( max-width: 991px )
+  .srv
+    &-c
+      &-photo
+        margin-bottom: 20px
+        height: 160px
+      &-title
+        margin-bottom: 20px
+        font-size: 20px
+      &-p
+        margin: 0 auto 20px
+        font-size: 13px
+        line-height: 17px
+  
+  .cons
+    .srv
+      &-b
+        flex-wrap: wrap
+      &-c
+        &__wrapper
+          width: 40%
+
+@media ( max-width: 768px )
+  .srv
+    &-c
+      &-photo
+        height: 120px
+      &-title
+        font-size: 17px
+      &-p
+        font-size: 11px
+    &-link
+      max-width: 120px
+      height: 35px
+      font-size: 12px
+
+@media ( max-width: 520px )
+  .srv
+    &-b
+      padding: 0 10px
+    &-c
+      &__wrapper
+        margin: 0 5px 40px
+        width: 46%
+
+
+@media ( max-width: 420px )
+  .cons
+    .srv
+      &-c
+        &__wrapper
+          max-width: 300px
+          width: 100%

@@ -1,0 +1,1162 @@
+.acc
+  &__wrapper
+    margin: 0 auto
+    max-width: 1255px
+    padding: 50px 20px 250px
+    display: flex
+  &-bar
+    max-width: 400px
+    width: 100%
+    flex-shrink: 1
+    flex-grow: 0
+    &-btn
+      display: none
+    &-h
+      margin-bottom: 50px
+      display: flex
+      align-items: center
+      &__icon
+        svg
+          width: 32px
+          fill: $active
+      &-title
+        margin: 0
+        font-size: 27px
+        color: $dark-text
+  &-compl
+    margin-bottom: 35px
+    max-width: 400px
+    width: 100%
+    &-text
+      font-size: 15px
+      color: #CACBCD
+    &-number
+      font-size: 15px
+      color: $success
+    &-placeholder
+      margin-top: 15px
+      border-radius: 4px
+      display: flex
+      height: 7px
+      background-color: #F8F9FC
+    &-progress
+      border-radius: 4px
+      height: 7px
+      background-color: $success
+  &-prof
+    margin-bottom: 40px
+    display: flex
+    align-items: center
+    &-avatar
+      border-radius: 50%
+      overflow: hidden
+      width: 63px
+      flex-shrink: 0
+      img
+        width: 100%
+    &-name
+      margin-bottom: 5px
+      font-size: 19px
+      color: $dark-text
+    &-email
+      font-size: 16px
+      color: #CACBCD
+  &-tabs
+    &-item
+      border-top: 1px solid #F8F9FC
+      height: 46px
+      padding: 0 20px
+      display: flex
+      align-items: center
+      cursor: pointer
+      &:first-child
+        border-top: none
+      &.active
+        border: none
+        border-radius: 23px
+        background-color: #F8F9FC
+        .acc-tabs
+          &__icon
+            svg
+              fill: $active
+          &-label
+            color: $active
+        & + .acc-tabs-item
+          border-top: none
+    &__icon
+      svg
+        width: 25px
+        fill: #DFE2E9
+    &-label
+      font-size: 16px
+      text-transform: uppercase
+      color: $dark-text
+  &-content
+    display: none
+    &.active
+      display: block
+    &__wrapper
+      flex-grow: 1
+  &-form
+    margin-bottom: 30px
+    padding: 40px 40px 0
+    &._bottom
+      margin-bottom: 0
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+    &-title
+      margin: 0
+      margin-bottom: 30px
+      font-size: 21px
+      color: $dark-text
+    &-row
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+    &-g
+      width: 48%
+    &-item
+      max-width: 350px
+    &-label
+      &__text
+        color: #C2C6C8
+    &-av
+      border-radius: 10px
+      box-shadow: 0 6px 6px 0 #dfe1e3
+      background-color: #ffffff
+      width: 180px
+      height: 162px
+      display: flex
+      justify-content: center
+      align-items: center
+      &__wrapper
+        display: flex
+      &__icon
+        width: 60%
+        svg
+          width: 100%
+          fill: #EBECF1
+      &-btn
+        margin-bottom: 15px
+        border-radius: 10px
+        width: 48px
+        height: 48px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: #EFF1F6
+        cursor: pointer
+        &__input
+          display: none
+        &__icon
+          svg
+          &.upload
+            svg
+              width: 20px
+              fill: $success
+          &.delete
+            svg
+              width: 18px
+              fill: $active
+    &-dd
+      display: flex
+      align-items: center
+      justify-content: space-between
+      cursor: pointer
+      user-select: none
+      &__arrow
+        border-radius: 10px
+        width: 33px
+        height: 33px
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 20px
+        background-color: $component-bg
+        color: #D2D6E0
+      &-list
+        background-color: #ffffff
+        border-radius: 10px
+        box-shadow: 0 6px 6px 0 #dfe1e3
+        li
+          padding: 14px 10px
+          border-bottom: 1px solid $component-bg
+          &:hover
+            background-color: $component-bg
+          &:last-child
+            border-bottom: none
+            border-bottom-left-radius: 10px
+            border-bottom-right-radius: 10px
+    &-btn
+      &__text
+        text-transform: uppercase
+    &-checkbox
+      margin: 0
+      &__wrapper
+        display: flex
+        align-items: center
+      &__text
+        font-size: 16px
+        color: $dark-text
+    &-code
+      &__wrapper
+          width: 100%
+          height: 54px
+          padding: 0 20px
+          border-radius: 10px
+          border: none
+          display: flex
+          align-items: center
+          justify-content: space-between
+          box-shadow: 0 6px 6px 0 #dfe1e3
+          background-color: #ffffff
+          font-size: 16px
+          color: $dark-text
+          user-select: none
+      &__input
+        padding: 0 10px
+        border: none
+        background-color: transparent
+        width: 60%
+        height: 100%
+      &-btn
+        width: 100px
+        height: 40px
+        border-radius: 10px
+        padding: 0 15px
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 15px
+        color: #ffffff
+        background-color: $active
+        cursor: pointer
+        transition: 0.3s
+        &.apply
+          background-color: $success
+      &__icon
+        svg
+          width: 12px
+          fill: #ffffff
+    &-f
+      border-bottom-left-radius: 20px
+      border-bottom-right-radius: 20px
+      margin-bottom: 30px
+      height: 90px
+      padding: 0 30px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      background-color: #ffffff
+      flex-wrap: wrap
+      box-shadow: 0 6px 6px 0 #dfe1e3
+      &-total
+        margin: 0 10px
+        display: flex
+        align-items: center
+        &__icon
+          svg
+            width: 25px
+            fill: #DDE0E1
+      &-discount
+        margin: 0 10px
+      &-text
+        margin: 0 5px
+        font-size: 19px
+        color: $dark-text
+        &._red
+          color: $active
+.step
+  &1
+    .profile
+      &-h
+        justify-content: flex-end
+    .on
+      &-b
+        &-f
+          justify-content: flex-end
+  &2
+    .profile
+      &-h
+        justify-content: space-between
+    .on
+      &-b
+        &-f
+          justify-content: space-between
+  &3
+    .profile
+      &-h
+        justify-content: flex-start
+    .on
+      &-b
+        &-f
+          justify-content: space-between
+
+
+.profile
+  display: none
+  margin-bottom: 50px
+  width: 780px
+  &.active
+    display: block
+  &-h
+    display: flex
+    align-items: center
+    margin-bottom: 44px
+  &-link
+    border-radius: 22px
+    height: 44px
+    padding: 0 20px
+    display: inline-flex
+    align-items: center
+    font-size: 15px
+    background-color: $component-bg
+    color: #C2C6C8
+    ._red
+      margin: 0 5px
+      color: $active
+
+.on
+  margin-bottom: 50px
+  display: none
+  &.active
+    display: block
+  &-h
+    margin-bottom: 40px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-step
+      display: flex
+      align-items: center
+      font-size: 24px
+      &__text
+        margin: 0 5px
+        color: #CBCFD1
+      &__num
+        margin: 0 5px
+        color: $active
+    &-title
+      margin: 0
+      margin-bottom: 5px
+      font-size: 24px
+      color: $dark-text
+    &-subtitle
+      font-size: 17px
+      color: #ABB3BA
+  &-b
+    border-radius: 20px
+    padding: 35px
+    padding-bottom: 0
+    background-color: $component-bg
+    &-title
+      margin-bottom: 30px
+      font-size: 21px
+      color: $dark-text
+    &-f
+      padding: 0 40px
+      display: flex
+      align-items: center
+  &-item
+    margin-bottom: 30px
+    border-radius: 15px
+    height: 120px
+    padding: 0 30px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: #ffffff
+    box-shadow: 0 6px 6px 0 #dfe1e3
+    &:last-child
+      margin-bottom: 0
+    &-info
+      width: 60%
+      display: flex
+      align-items: center
+    &-total
+      display: flex
+      align-items: center
+      font-size: 14px
+      &-b
+        display: flex
+        align-items: center
+      &__divider
+        margin: 0 20px
+        width: 1px
+        height: 23px
+        background-color: #E5E8F0
+      .label
+        margin: 0 5px
+        color: #B1B5BC
+      .value
+        color: $dark-text
+        &._red
+          color: $active
+    &-photo
+      max-width: 110px
+      width: 100%
+      img
+        width: 100%
+    &-title
+      font-size: 19px
+      color: $dark-text
+      margin-bottom: 10px
+    &-extrainfo
+      font-size: 14px
+      margin-bottom: 5px
+      color: #B1B5BC
+    &-counter
+      display: flex
+      align-items: center
+      user-select: none
+      .minus, .plus
+        width: 25px
+        height: 25px
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        svg
+          width: 80%
+          fill: #CFD2D8
+      .count
+        margin: 0 20px
+        width: 50px
+        height: 30px
+        border-radius: 10px
+        border: 1px solid #F1F2F6
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 14px
+        background-color: #F8F9FC
+        color: $dark-text
+  &-btn
+    display: inline-flex
+    margin: 0
+    text-transform: uppercase
+    &.prev
+      background-color: #686B74
+  &-form
+    &-textarea
+      width: 100%
+      height: 140px
+      padding: 20px
+      border-radius: 10px
+      border: none
+      box-shadow: 0 6px 6px 0 #dfe1e3
+      background-color: #ffffff
+      font-size: 16px
+      color: $dark-text
+      resize: none
+      &__wrapper
+        margin: 0
+        max-width: none
+        width: 100%
+      &::placeholder
+        color: #D3D6DA
+  &-pm
+    margin-bottom: 25px
+    border-radius: 28px
+    height: 56px
+    padding: 0 20px
+    background-color: #ffffff
+    display: flex
+    align-items: center
+    &:last-child
+      margin-bottom: 0
+    &__wrapper
+      margin-bottom: 40px
+      padding-bottom: 35px
+    label
+      width: 100%
+      height: 100%
+    &-info
+      margin: 0 5px
+      display: flex
+      align-items: center
+      &__icon
+        margin: 0 5px
+        img
+          width: 26px
+      &__text
+        font-size: 16px
+        color: $dark-text
+  &-ttl
+    margin-bottom: 40px
+    padding-bottom: 35px
+    &-row
+      border-bottom: 1px solid #EEEFF1
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+      padding: 15px 0
+      &:last-child
+        border-bottom: none
+    &-label
+      margin: 0 10px
+      font-size: 16px
+      color: $dark-text
+    &-value
+      margin: 0 10px
+      font-size: 16px
+      text-transform: uppercase
+      color: $dark-text
+      &._grey
+        font-size: 15px
+        color: #B0B2B8
+      &._green
+        font-size: 15px
+        color: $success
+      &._red
+        font-size: 17px
+        color: $active
+  &-f
+    display: flex
+    &-btn
+      transform: none
+    &-checkbox
+      margin: 0 20px
+
+.types
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  &-item
+    position: relative
+    border-radius: 15px
+    margin-bottom: 50px
+    width: 46%
+    padding: 50px 20px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    background-color: #ffffff
+    box-shadow: 0 6px 6px 0 #dfe1e3
+  &-icon
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translate(-50%, -50%)
+    border-radius: 50%
+    border: 6px solid #ffffff
+    width: 53px
+    height: 53px
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $component-bg
+    img
+      width: 20px
+  &-title
+    font-size: 19px
+    text-transform: uppercase
+    color: $dark-text
+  &-subtitle
+    margin-top: 5px
+    font-size: 14px
+    color: #b2b7bc
+
+.my
+  padding-bottom: 35px
+  &__wrapper
+    margin-bottom: 50px
+  &-item
+    padding: 20px
+    height: auto
+  .on
+    &-item
+      &-photo
+        max-width: 80px
+
+.table
+  max-width: 810px
+  table-layout: fixed
+  width: 100%
+  border-collapse: collapse
+  &__wrapper
+    border-radius: 20px
+    padding: 35px
+    background-color: $component-bg
+  thead
+    background-color: transparent
+  tbody
+    overflow: hidden
+    background-color: #ffffff
+  tr
+    border-bottom: 1px solid #F2F5FA
+    &:first-child
+      td
+        padding-top: 30px
+    &:last-child
+      border-bottom: none
+      td
+        padding-bottom: 30px
+  td, th
+    padding: 15px 5px
+    max-width: 0
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+  th
+    font-size: 15px
+    color: #BBC5CC
+  td
+    font-size: 14px
+    color: $dark-text
+    &:first-child
+      margin-left: 15px
+    &._red
+      color: $active
+    &._green
+      color: $success
+    &._grey
+      color: #BBC5CC
+
+
+body[data-dir="ltr"]
+  .acc
+    &-bar
+      margin-right: 36px
+      &-h
+        &__icon
+          margin-right: 15px
+    &-prof
+      &-avatar
+        margin-right: 20px
+      &-email
+        +exo-med
+    &-tabs
+      &__icon
+        margin-right: 15px
+      &-item
+        &.active
+          .acc-tabs
+            &-label
+              color: $active
+              &::after
+                border-top: 2px solid $active
+                border-right: 2px solid $active
+    &-form
+      &-label
+        &__text
+          +exo-med
+      &-av
+        margin-right: 17px
+      &-btn
+        &__icon
+          margin-right: 15px
+      &-checkbox
+        &__text
+          margin-left: 15px
+      &-code
+        &-btn
+          +exo-med
+        &__icon
+          margin-right: 10px
+      &-f
+        &-total
+          &__icon
+            margin-right: 15px
+
+  .on
+    &-h
+      &-subtitle
+        +exo-med
+    &-item
+      &-photo
+        margin-right: 30px
+      &-extrainfo
+        +exo-med
+    &-btn
+      &.next
+        &::after
+          top: 0
+          border-top: 2px solid #ffffff
+          border-right: 2px solid #ffffff
+      &.prev
+        &::before
+          content: ''
+          position: relative
+          top: 0
+          display: inline-block
+          margin-right: 5px
+          width: 5px
+          height: 5px
+          transform: rotate(45deg)
+          border-bottom: 2px solid #ffffff
+          border-left: 2px solid #ffffff
+    &-f
+      justify-content: flex-end
+
+  .table
+    tr
+      &:first-child
+        border-top-left-radius: 20px
+        border-top-right-radius: 20px
+        td
+          &:first-child
+            border-top-left-radius: 20px
+          &:last-child
+            border-top-right-radius: 20px
+      &:last-child
+        td
+          &:first-child
+            border-bottom-left-radius: 20px
+          &:last-child
+            border-bottom-right-radius: 20px
+    td, th
+      text-align: left
+      &:first-child
+        padding-left: 30px
+      &:last-child
+        padding-right: 30px
+    ._center
+      text-align: center
+    .date
+      text-align: right
+
+
+body[data-dir="rtl"]
+  .acc
+    &-bar
+      margin-left: 36px
+      &-h
+        &__icon
+          margin-left: 15px
+    &-prof
+      &-avatar
+        margin-left: 20px
+      &-email
+        +rubik-med
+    &-tabs
+      &__icon
+        margin-left: 15px
+      &-item
+        &.active
+          .acc-tabs
+            &-label
+              color: $active
+              &::before
+                border-top: 2px solid $active
+                border-right: 2px solid $active
+    &-form
+      &-label
+        &__text
+          +rubik-med
+      &-av
+        margin-left: 17px
+      &-btn
+        flex-direction: row-reverse
+        &__icon
+          margin-right: 15px
+      &-checkbox
+        &__text
+          margin-right: 15px
+      &-code
+        &-btn
+          +rubik-med
+        &__icon
+          margin-left: 10px
+      &-f
+        &-total
+          &__icon
+            margin-left: 15px
+
+  .profile
+    &-h, &-link
+      flex-direction: row-reverse
+
+  .on
+    &-h
+      &-subtitle
+        +rubik-med
+    &-item
+      &-photo
+        margin-left: 30px
+      &-extrainfo
+        +rubik-med
+      &-counter
+        flex-direction: row-reverse
+      &-total
+        flex-direction: row-reverse
+        &-b
+          flex-direction: row-reverse
+    &-btn
+      &.next
+        &::before
+          content: ''
+          position: relative
+          top: 0
+          display: inline-block
+          margin-right: 5px
+          width: 5px
+          height: 5px
+          transform: rotate(45deg)
+          border-top: 2px solid #ffffff
+          border-right: 2px solid #ffffff
+      &.prev
+        &::before
+          display: none
+        &::after
+          content: ''
+          position: relative
+          top: 0
+          display: inline-block
+          margin-right: 5px
+          width: 5px
+          height: 5px
+          transform: rotate(45deg)
+          border-bottom: 2px solid #ffffff
+          border-left: 2px solid #ffffff
+    &-f
+      justify-content: space-between
+    .acc
+      &-form
+        &-row
+          flex-direction: row-reverse
+
+  .types
+    flex-direction: row-reverse
+
+  .table
+    tr
+      &:first-child
+        border-top-left-radius: 20px
+        border-top-right-radius: 20px
+        td
+          &:first-child
+            border-top-right-radius: 20px
+          &:last-child
+            border-top-left-radius: 20px
+      &:last-child
+        td
+          &:first-child
+            border-bottom-right-radius: 20px
+          &:last-child
+            border-bottom-left-radius: 20px
+    td, th
+      text-align: right
+      &:first-child
+        padding-right: 30px
+      &:last-child
+        padding-left: 30px
+    ._center
+      text-align: center
+    .date
+      text-align: left
+
+@media ( max-width: 1367px )
+  .acc
+    &-bar
+      max-width: 250px
+      &-h
+        &__icon
+          svg
+            width: 24px
+        &-title
+          font-size: 22px
+    &-prof
+      &-avatar
+        width: 45px
+      &-name
+        margin-bottom: 0
+        font-size: 17px
+      &-email
+        font-size: 13px
+    &-tabs
+      &-label
+        font-size: 14px
+
+  .on
+    &-h
+      &-title
+        font-size: 20px
+      &-subtitle
+        font-size: 15px
+      &-step
+        font-size: 20px
+    &-item
+      &-photo
+        max-width: 90px
+      &-counter
+        .count
+          margin: 0 12px
+        .minus, .plus
+          width: 20px
+          height: 20px
+    &-btn
+      height: 48px
+      font-size: 14px
+
+@media ( max-width: 1200px )
+  .profile
+    width: 680px
+
+@media ( max-width: 991px )
+  .acc
+    &__wrapper
+      max-width: none
+      display: block
+      padding: 0
+      position: relative
+    &-bar
+      max-width: 280px
+      padding: 20px
+      position: absolute
+      top: 0
+      background-color: #ffffff
+      box-shadow: 0 6px 6px 0 #dfe1e3
+      transition: 0.4s
+      will-change: transform
+      z-index: 500
+      &-btn
+        display: block
+        position: absolute
+        top: 40px
+        width: 45px
+        height: 60px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: #ffffff
+        svg
+          width: 25px
+    &-content
+      &__wrapper
+        padding: 50px 20px 250px
+
+  .profile
+    width: auto
+    &-h
+      margin: 0 20px 44px
+
+  .on
+    &-h
+      margin-right: 35px
+      margin-left: 35px
+    &-b
+      &-f
+        padding: 0
+
+  .table
+    max-width: none
+    &__wrapper
+      padding: 15px
+
+  body[data-dir="ltr"]
+    .acc
+      &-bar
+        transform: translateX(-100%)
+        margin-right: 0
+        left: 0
+        border-top-right-radius: 15px
+        border-bottom-right-radius: 15px
+        &-btn
+          right: -45px
+          border-top-right-radius: 10px
+          border-bottom-right-radius: 10px
+          box-shadow: 10px 0px 20px 0px #f1f1f1
+        &.active
+          transform: translateX(0)
+  body[data-dir="rtl"]
+    .acc
+      &-bar
+        transform: translateX(100%)
+        margin-left: 0
+        right: 0
+        border-top-left-radius: 15px
+        border-bottom-left-radius: 15px
+        &-btn
+          left: -45px
+          border-top-left-radius: 10px
+          border-bottom-left-radius: 10px
+          box-shadow: -10px 0px 20px 0px #f1f1f1
+          svg
+            transform: rotate(180deg)
+        &.active
+          transform: translateX(0)
+
+@media ( max-width: 768px )
+  .acc
+    &-form
+      padding: 20px 20px 0
+      &-g
+        &._sm-w100
+          width: 100%
+          order: 1
+        &._sm-flex
+          order: 2
+          width: 100%
+          display: flex
+          justify-content: space-between
+          align-items: center
+          .acc-form-item
+            width: 48%
+            margin-right: 0
+            margin-left: 0
+      &-item
+        max-width: none
+      &-label
+        &__text
+          font-size: 14px
+      &-input
+        font-size: 14px
+      &-btn
+        height: 50px
+        font-size: 14px
+      &-code
+        &-btn
+          width: 85px
+          height: 35px
+          font-size: 12px
+      &-f
+        padding: 20px
+        height: auto
+        &-text
+          font-size: 16px
+
+  .profile
+    &-link
+      height: 40px
+      padding: 0 15px
+      font-size: 12px
+
+  .on
+    &-item
+      height: 100px
+      padding: 0 20px
+      &-photo
+        max-width: 60px
+      &-title
+        margin-bottom: 5px
+        font-size: 17px
+      &-extrainfo
+        font-size: 12px
+    &-b
+      padding: 20px 20px 0
+      &-title
+        font-size: 18px
+    &-pm
+      &__wrapper
+        padding-bottom: 20px
+
+  .types
+    padding: 30px
+    padding-bottom: 0
+    &-item
+      width: 49%
+      padding: 35px 10px
+    &-title
+      text-align: center
+      font-size: 13px
+
+  .table
+    th
+      font-size: 13px
+    td
+      font-size: 12px
+
+
+  body[data-dir="ltr"]
+    .acc
+      &-form
+        &-f
+          &-total
+            &__icon
+              margin-right: 5px
+  body[data-dir="rtl"]
+    .acc
+      &-form
+        &-f
+          &-total
+            &__icon
+              margin-left: 5px
+
+@media ( max-width: 520px )
+  .acc
+    &-content
+      &__wrapper
+        padding-bottom: 60px
+    &-form
+      &-av
+        width: 120px
+        height: 100px
+        &-btn
+          width: 32px
+          height: 32px
+          &__icon
+            &.upload
+              svg
+                width: 15px
+            &.delete
+              svg
+                width: 15px
+      &-code
+        &__wrapper
+          height: 42px
+        &-btn
+          height: 30px
+      &-g
+        width: 100%
+      &-input
+        height: 42px
+      &-f
+        &-text
+          font-size: 12px
+      &-checkbox
+        &__wrapper
+          margin-bottom: 20px
+        &__text
+          font-size: 13px
+
+  .profile
+    &-h
+      flex-wrap: wrap
+    &-link
+      margin: 0 10px 10px
+
+  .on
+    &-h
+      margin: 0 40px 40px
+      flex-direction: column
+      align-items: flex-start
+      &-step
+        margin-top: 15px
+        font-size: 16px
+    &-item
+      padding: 20px
+      height: auto
+      flex-direction: column
+      &-info
+        margin-bottom: 20px
+        width: 100%
+      &-total
+        font-size: 12px
+        &__divider
+          margin: 0 10px
+    &-btn
+      height: 35px
+      font-size: 10px
+      padding: 0 10px
+    &-pm
+      height: 46px
+      &-info
+        &__text
+          font-size: 14px
+
+  .types
+    padding: 40px 10px 10px
+    justify-content: center
+    &-item
+      margin: 0 10px 50px
+      max-width: 300px
+      width: 100%
+
+  .table
+    width: 580px
+    &__wrapper
+      overflow-x: scroll
+

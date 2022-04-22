@@ -1,0 +1,49 @@
+.lgn
+  padding: 50px 0 100px
+  &-h
+    margin-bottom: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    &__title
+      margin: 0
+      font-size: 27px
+      color: $dark-text
+  &-form
+    max-width: 450px
+    &-item
+      width: 80%
+    &-rec
+      text-align: center
+      font-size: 15px
+      color: $dark-text
+      a
+        color: $active
+
+body[data-dir="ltr"]
+  .lgn
+    &-h
+      &__icon
+        margin-right: 10px
+
+body[data-dir="rtl"]
+  .lgn
+    &-h
+      &__icon
+        margin-left: 10px
+
+@media ( max-width: 991px )
+  .lgn
+    &-h
+      &__icon
+        width: 20px
+        height: 20px
+      &__title
+        font-size: 22px
+    &-form
+      &-btn
+        height: 46px
+
+@media ( max-width: 520px )
+  .lgn
+    padding: 30px 20px 80px

@@ -1,0 +1,104 @@
+.rec
+  &-item
+    border-radius: 20px
+    padding: 27px
+    display: flex
+    background-color: $component-bg
+  &-photo
+    flex-shrink: 0
+    max-width: 88px
+    img
+      width: 100%
+  &-t
+    flex-shrink: 1
+  &-row
+    margin-bottom: 15px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+  &-title
+    font-size: 18px
+    color: $dark-text
+  &-date
+    font-size: 13px
+    color: #CDD1D4
+  &-p
+    font-size: 15px
+    color: #CDD1D4
+  &-slider
+    &__wrapper
+      position: relative
+      padding: 0 50px
+    &-arrow
+      &-prev
+        left: 0
+      &-next
+        right: 0
+      &-next, &-prev
+        position: absolute
+        top: 0
+        z-index: 10
+        height: 80%
+        background-color: transparent
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        svg
+          width: 45px
+          height: 95px
+          fill: #EDEDED
+
+.rec-slider
+  &.swiper-container
+    padding-bottom: 60px
+  .swiper-pagination-bullet
+    width: 9px
+    height: 9px
+    background-color: #acacac
+    &-active
+      background-color: $active
+
+
+body[data-dir="ltr"]
+  .rec
+    &-photo
+      margin-right: 25px
+    &-title
+      margin-right: 10px
+    &-p
+      +exo-med
+
+body[data-dir="rtl"]
+  .rec
+    &-photo
+      margin-left: 25px
+    &-title
+      margin-left: 10px
+    &-p
+      +rubik-med
+
+@media ( max-width: 1376px )
+  .rec
+    &-slider
+      &-arrow
+        &-next, &-prev
+          svg
+            width: 30px
+            height: 50px
+
+@media ( max-width: 1200px )
+  .rec
+    &-slider
+      &__wrapper
+        padding: 0 30px
+    &-photo
+      max-width: 65px
+    &-p
+      font-size: 14px
+
+@media ( max-width: 768px )
+  .rec
+    &-photo
+      max-width: 40px

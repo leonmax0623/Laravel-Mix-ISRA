@@ -1,0 +1,85 @@
+.tps
+  padding: 0 20px
+  &-b
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-c
+    border-radius: 15px
+    width: 45%
+    padding: 50px
+    background-color: $component-bg
+    &-h
+      margin-bottom: 35px
+      display: flex
+      align-items: center
+      &__icon
+        width: 30px
+    &-title
+      margin: 0
+      font-size: 27px
+      color: $dark-text
+    &-p
+      font-size: 16px
+      color: #B7B9BA
+    &-row
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+body[data-dir="ltr"]
+  .tps
+    &-c
+      &-h
+        &__icon
+          margin-right: 10px
+      &-p
+        +exo-med
+body[data-dir="rtl"]
+  .tps
+    &-c
+      &-h
+        &__icon
+          margin-left: 10px
+      &-p
+        +rubik-med
+
+@media ( max-width: 1367px )
+  .tps
+    &-c
+      padding: 30px
+      width: 48%
+      &-h
+        margin-bottom: 20px
+      &-title
+        font-size: 22px
+
+@media ( max-width: 991px )
+  .tps
+    &-b
+      flex-wrap: wrap
+      justify-content: center
+    &-c
+      margin-bottom: 30px
+      max-width: 700px
+      width: 100%
+
+@media ( max-width: 520px )
+  .tps
+    &-c
+      &-title
+        font-size: 20px
+      &-p
+        margin-bottom: 30px
+        font-size: 14px
+@media ( max-width: 420px )
+  .tps
+    &-c
+      padding: 20px
+      &-row
+        justify-content: center
+        flex-wrap: wrap
+    &-more
+      margin-bottom: 20px
+      text-align: center
+      width: 100%

@@ -1,0 +1,77 @@
+.why
+  padding: 0 20px
+  &-c
+    margin-bottom: 40px
+    border-radius: 15px
+    padding: 35px
+    display: flex
+    align-items: center
+    background-color: $component-bg
+    &-image
+      flex-shrink: 0
+      width: 128px
+      img
+        width: 100%
+    &-t
+      flex-shrink: 1
+    &-title
+      margin: 0
+      margin-bottom: 20px
+      font-size: 25px
+      color: $dark-text
+    &-p
+      font-size: 16px
+      color: #B7B9BA
+  &-link
+    margin: 0 auto
+    max-width: 240px
+
+body[data-dir="ltr"]
+  .why
+    &-c
+      &-image
+        margin-right: 35px
+      &-p
+        +exo-med
+
+body[data-dir="rtl"]
+  .why
+    &-c
+      &-image
+        margin-left: 35px
+      &-p
+        +rubik-med
+
+@media ( max-width: 1200px )
+  .why
+    &-c
+      padding: 25px
+      &-title
+        font-size: 20px
+      &-p
+        font-size: 14px
+
+@media ( max-width: 520px )
+  .why
+    &-c
+      flex-wrap: wrap
+      &-p
+        font-size: 12px
+        line-height: 17px
+    &-t
+      width: 100%
+    
+
+  body[data-dir="ltr"]
+    .why
+      &-c
+        flex-wrap: wrap
+        &-image
+          margin: 0 auto 20px
+          
+  body[data-dir="rtl"]
+    .why
+      &-c
+        flex-wrap: wrap
+        &-image
+          margin: 0 auto 20px

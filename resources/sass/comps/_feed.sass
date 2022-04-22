@@ -1,0 +1,173 @@
+.feed
+  padding: 50px 20px
+  &-h
+    margin-bottom: 50px
+    display: flex
+    align-items: center
+    &__icon
+      width: 36px
+    &__title
+      font-size: 27px
+      color: $dark-text
+  &-b
+    margin-bottom: 35px
+    border-radius: 20px
+    padding: 50px
+    padding-bottom: 35px
+    background-color: $component-bg
+  &-c
+    margin-bottom: 40px
+    border-radius: 15px
+    padding: 35px
+    display: flex
+    background-color: #ffffff
+    box-shadow: 0 7px 10px 0 #dfe1e3
+    &-prew
+      flex-shrink: 0
+      border-radius: 15px
+      width: 262px
+      overflow: hidden
+      // display: flex
+      // align-items: center
+      img
+        width: 100%
+    &-t
+      flex-shrink: 1
+    &-h
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+    &-title
+      margin: 0
+      margin-bottom: 20px
+      font-size: 21px
+      color: $dark-text
+    &-date
+      margin-bottom: 20px
+      display: flex
+      align-items: center
+      color: #CFD3D8
+      &__icon
+        svg
+          width: 20px
+          height: 18px
+          fill: #CFD3D8
+    &-p
+      margin: 0 0 20px
+      font-size: 15px
+      color: $dark-text
+    &-link
+      border-radius: 27px
+      height: 48px
+      padding: 0 20px
+      display: inline-flex
+      align-items: center
+      font-size: 16px
+      background-color: $active
+      color: #ffffff
+  &-pag
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    flex-wrap: wrap
+    &-item
+      margin-bottom: 15px
+      margin-left: 15px
+      border-radius: 5px
+      width: 27px
+      height: 27px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 13px
+      background-color: #F7F8FA
+      color: #A6B0BB
+      &.active
+        background-color: $active
+        color: #ffffff
+
+
+body[data-dir="ltr"]
+  .feed
+    &-h
+      &__icon
+        margin-right: 15px
+    &-c
+      &-prew
+        margin-right: 35px
+      &-title
+        margin-right: 10px
+      &-date
+        &__icon
+          margin-left: 10px
+      &-p
+        +exo-med
+      &-link
+        &::after
+          top: 1px
+          width: 4px
+          height: 4px 
+          border-top: 2px solid #ffffff
+          border-right: 2px solid #ffffff
+
+body[data-dir="rtl"]
+  .feed
+    &-h
+      &__icon
+        margin-left: 15px
+    &-c
+      &-prew
+        margin-left: 35px
+      &-title
+        margin-left: 10px
+      &-date
+        &__icon
+          margin-right: 10px
+      &-p
+        +rubik-med
+      &-link
+        &::before
+          top: 1px
+          width: 4px
+          height: 4px 
+          border-top: 2px solid #ffffff
+          border-right: 2px solid #ffffff
+    &-pag
+      flex-direction: row-reverse
+
+@media ( max-width: 1200px )
+  .feed
+    padding: 30px 20px
+    &-h
+      margin-bottom: 30px
+      &__icon
+        width: 25px
+      &__title
+        font-size: 20px
+    &-b
+      padding: 30px
+    &-c
+      padding: 25px
+      &-title
+        margin-bottom: 15px
+        font-size: 18px
+      &-date
+        margin-bottom: 15px
+        font-size: 14px
+      &-p
+        font-size: 13px
+        line-height: 17px
+      &-link
+        height: 40px
+        padding: 0 15px
+        font-size: 14px
+
+@media ( max-width: 768px )
+  .feed
+    &-c
+      flex-direction: column-reverse
+      &-t
+        margin-bottom: 20px
+      &-prew
+        width: 100%

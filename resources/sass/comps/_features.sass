@@ -1,0 +1,153 @@
+.ftr
+  position: relative
+  top: -50px
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  &-c
+    margin-bottom: 50px
+    max-width: 32%
+    border-radius: 25px
+    padding: 30px
+    background-color: $component-bg
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &-h
+      margin-bottom: 15px
+      display: flex
+      align-items: center
+    &-icon
+      max-width: 50px
+    &-title
+      margin: 0
+      font-size: 20px
+      color: $active
+    ._ltr
+      direction: ltr
+      unicode-bidi: bidi-override
+    &-ex
+      font-size: 16px
+      color: $dark-text
+      &::before
+        content: ''
+        margin: 0 5px
+        display: inline-block
+        width: 12px
+        height: 12px
+        background: transparent url(/resources/images/check-mark.svg) no-repeat
+        background-position: center center
+      &__wrapper
+        margin-bottom: 20px
+        display: flex
+        flex-wrap: wrap
+    &-desc
+      margin: 0
+      margin-bottom: 20px
+      font-size: 16px
+      color: #989DA0
+    &-link
+      max-width: 180px
+      height: 57px
+      border-radius: 28px
+      padding: 0 20px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 16px
+      background-color: #ffffff
+      color: #959698
+      box-shadow: 0 6px 6px 0 #dfe1e3
+      transition: 0.3s
+      &:hover
+        transform: translateY(-2px)
+        box-shadow: 0 9px 14px 2px #dfe1e3
+
+body[data-dir="ltr"]
+  .ftr
+    &-c
+      &-icon
+        margin-right: 20px
+      &-ex
+        margin-right: 10px
+      &-desc
+        +exo-med
+      &-link
+        &::after
+          width: 4px
+          height: 4px
+          top: 1px
+          border-top: 2px solid #989DA0
+          border-right: 2px solid #989DA0
+
+body[data-dir="rtl"]
+  .ftr
+    flex-direction: row-reverse
+    &-c
+      &-icon
+        margin-left: 20px
+      &-ex
+        margin-left: 10px
+      &-desc
+        +rubik-med
+      &-link
+        &::before
+          width: 4px
+          height: 4px
+          top: 1px
+          border-top: 2px solid #989DA0
+          border-right: 2px solid #989DA0
+
+@media ( max-width: 1610px )
+  .ftr
+    padding: 0 10px
+    &-c
+      margin-bottom: 20px
+
+@media ( max-width: 1367px )
+  .ftr
+    &-c
+      &-title
+        font-size: 18px
+      &-ex
+        font-size: 12px
+      &-desc
+        font-size: 14px
+      &-link
+        max-width: 150px
+        height: 40px
+        font-size: 14px
+
+@media ( max-width: 991px )
+  .ftr
+    justify-content: center
+    &-c
+      margin: 0 10px 20px
+      max-width: 45%
+
+@media ( max-width: 768px )
+  body[data-dir="ltr"]
+    .ftr
+      &-c
+        &-icon
+          margin-right: 15px
+  body[data-dir="rtl"]
+    .ftr
+      &-c
+        &-icon
+          margin-left: 15px
+  .ftr
+    padding: 0
+    &-c
+      &-icon
+        max-width: 25px
+      &-title
+        font-size: 16px
+      &-desc
+        font-size: 12px
+
+@media ( max-width: 520px )
+  .ftr
+    &-c
+      max-width: 90%
+

@@ -1,0 +1,233 @@
+.cnt
+  padding: 70px 0
+  &-h
+    margin-bottom: 60px
+    display: flex
+    align-items: center
+    &__icon
+      max-width: 30px
+    &__title
+      margin: 0
+      font-size: 27px
+      color: $dark-text
+  &__inner
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &-c
+    margin-bottom: 60px
+    border-radius: 20px
+    padding: 36px
+    width: 48%
+    background-color: $component-bg
+    display: flex
+    justify-content: space-between
+    &-info
+      display: flex
+      flex-direction: column
+      width: 60%
+    &-title
+      margin: 0
+      margin-bottom: 25px
+      font-size: 23px
+      color: $dark-text
+    &-address
+      margin-bottom: 25px
+      font-style: normal
+      font-size: 16px
+      color: $dark-text
+    &__row
+      flex-grow: 1
+      display: flex
+      justify-content: space-between
+    &-list
+      align-self: flex-start
+      font-size: 16px
+      color: $dark-text
+      &__title
+        margin-bottom: 10px
+      ul
+        margin: 0
+        padding: 0
+        list-style: none
+        li
+          margin-bottom: 5px
+          &::before
+            content: ' • '
+    &-link
+      align-self: flex-end
+      height: 54px
+      border-radius: 27px
+      padding: 0 20px
+      display: inline-flex
+      align-items: center
+      font-size: 15px
+      text-transform: uppercase
+      background-color: $active
+      color: #ffffff
+      white-space: nowrap
+    &-map
+      border-radius: 20px
+      overflow: hidden
+      &__wrapper
+        align-self: center
+        max-width: 245px
+      iframe
+        height: 100%
+        min-height: 280px
+  &-sc
+    margin-bottom: 60px
+    border-radius: 20px
+    padding: 36px
+    width: 48%
+    background-color: $component-bg
+    color: $dark-text
+    &-h
+      margin-bottom: 30px
+      border-radius: 28px
+      height: 56px
+      display: flex
+      align-items: center
+      padding: 0 25px
+      background-color: #ffffff
+      &__title
+        margin: 0
+        font-size: 23px
+    &-b
+      padding: 0 20px
+    &-desc
+      margin-bottom: 20px
+      font-size: 16px
+    &__divider
+      margin: 30px 0
+      height: 1px
+      border-bottom: 1px dotted #D6D7D9
+    &-row
+      margin-bottom: 20px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      flex-wrap: wrap
+    &-label, &-data
+      margin-bottom: 10px
+      font-size: 16px
+
+body[data-dir="ltr"]
+  .cnt
+    &-h
+      &__icon
+        margin-right: 15px
+    &-c
+      &-info
+        margin-right: 30px
+      &-address, &-list li
+        +exo-med
+      &-link
+        &::after
+          top: 1px
+          width: 4px
+          height: 4px
+          border-top: 2px solid #ffffff
+          border-right: 2px solid #ffffff
+    &-sc
+      &-label, &-data
+        +exo-med
+      &-label
+        margin-right: 10px
+
+
+body[data-dir="rtl"]
+  .cnt
+    &-h
+      &__icon
+        margin-left: 15px
+    &__inner
+      flex-direction: row-reverse
+    &-c
+      &-info
+        margin-left: 30px
+      &-address, &-list li
+        +rubik-med
+      &-link
+        &::before
+          top: 1px
+          width: 4px
+          height: 4px
+          border-top: 2px solid #ffffff
+          border-right: 2px solid #ffffff
+    &-sc
+      &-label, &-data
+        +rubik-med
+      &-label
+        margin-left: 10px
+
+@media ( max-width: 1610px )
+  .cnt
+    padding: 70px 20px
+
+@media ( max-width: 1367px )
+  .cnt
+    &-c
+      &-title
+        font-size: 20px
+        margin-bottom: 15px
+      &-address
+        font-size: 14px
+      &__row
+        flex-wrap: wrap
+      &-link
+        margin-top: 20px
+        height: 46px
+        font-size: 13px
+    &-sc
+      &-h
+        &__title
+          font-size: 20px
+
+@media ( max-width: 1200px )
+  .cnt
+    &__inner
+      justify-content: center
+    &-c, &-sc
+      max-width: 750px
+      width: 100%
+
+@media ( max-width: 768px )
+  .cnt
+    padding: 30px 20px
+    &-h
+      margin-bottom: 30px
+      &__icon
+        max-width: 20px
+      &__title
+        font-size: 22px
+    &-c
+      margin-bottom: 30px
+      padding: 20px
+      &-map
+        &__wrapper
+          max-width: 200px
+
+@media ( max-width: 520px )
+  .cnt
+    &-c
+      flex-wrap: wrap
+      &-info
+        margin-bottom: 35px
+        width: 100%
+      &-map
+        text-align: center
+        &__wrapper
+          width: 100%
+          max-width: none
+
+  body[data-dir="ltr"]
+    .cnt
+      &-c
+        &-info
+          margin-right: 0
+  body[data-dir="rtl"]
+    .cnt
+      &-c
+        &-info
+          margin-left: 0

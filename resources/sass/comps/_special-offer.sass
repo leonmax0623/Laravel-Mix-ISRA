@@ -1,0 +1,50 @@
+/* SPECIAL OFFER */
+
+.sp-offer
+  background: #0D0E12 url('/resources/images/sp-offer-bg.png') no-repeat
+  background-position: center center
+  background-size: cover
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 25px 22px
+  &-text
+    margin: 0 10px
+    +exo-bold
+    font-size: 14px
+    text-align: center
+    text-transform: uppercase
+    color: #fff
+  &-arrow
+    width: 20px
+    svg
+      fill: #3E3E40
+    &._active
+      svg
+        fill: #ffffff
+
+body[data-dir="ltr"]
+  .sp-offer
+    &-text
+      +exo-bold
+      font-size: 14px
+
+body[data-dir="rtl"]
+  .sp-offer
+    flex-direction: row-reverse
+    &-text
+      +rubik-bold
+      font-size: 18px
+
+@media ( max-width: 1200px )
+  .sp-offer
+    padding: 15px
+    &-arrow
+      width: 15px
+
+@media ( max-width: 576px )
+  .sp-offer
+    padding: 10px
+    &-text
+      font-size: 12px
+
